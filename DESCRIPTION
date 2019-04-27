@@ -1,18 +1,26 @@
 Package: normentR
 Type: Package
-Title: NORMENT's Collected Plotting and Functionality Package
-Version: 0.1.4
-Author: Daniel Roelfs
+Title: NORMENT's Collected Plotting and Functionality Package for R
+Version: 0.1.5
+Author@R: person("Daniel", "Roelfs", email = "daniel.roelfs@medisin.uio.no",
+               role = c("aut", "cre"))
+Author: Daniel Roelfs [aut, cre]
 Maintainer: Daniel Roelfs <daniel.roelfs@medisin.uio.no>
-Description: This packages contains a bunch of functions and tools specific to NORMENT. 
-    The main class of functions in this package is the "ggplot2" add-on functions. 
-    This package collected the NORMENT house style and created functions so that it can easily be applied to "ggplot" objects.
-    This package is under constant development, and additions will be made to the functionality over time.
+Description: This packages contains a bunch of functions and tools specific to 
+    NORMENT. The main class of functions in this package is the "ggplot2" add-on
+    functions. This package collected the NORMENT house style and created 
+    functions so that it can easily be applied to "ggplot" objects. This package
+    is under constant development, and additions will be made to the 
+    functionality over time.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
-Imports:
+URL: http://github.com/norment/normentR
+Depends:
     ggplot2,
-    png,
+    png
+Imports:
     grid
+Suggests: 
+    scico
