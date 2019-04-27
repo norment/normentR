@@ -28,5 +28,5 @@ adaptable, so many elements in each plot can be formatted to personal taste.
 While this function contains the general style of the plot, it does not
 automatically use the NORMENT colors on data presented in the plot. In order
 to use the NORMENT colors also, please refer to the `scale_color_norment` and
-the `scale_fill_norment` functions, also included in the `norment`` package.
+the `scale_fill_norment` functions, also included in the `normentR` package.
 }

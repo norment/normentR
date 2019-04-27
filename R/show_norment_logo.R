@@ -21,9 +21,9 @@
 
 show_norment_logo <- function(plot.obj = plot, with.name = FALSE, pos = c(0.96,0.05), just = "center", size = unit(25, "points"), ...){
   if (with.name) {
-    logo.link <- system.file("logos/logo_wname.png", package = "norment")
+    logo.link <- system.file("logos/logo_wname.png", package = "normentR")
   } else {
-    logo.link <- system.file("logos/logo.png", package = "norment")
+    logo.link <- system.file("logos/logo.png", package = "normentR")
   }
   logo <- png::readPNG(logo.link)
   print(plot.obj)

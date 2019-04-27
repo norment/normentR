@@ -6,6 +6,9 @@
 #' fit well with the NORMENT theme also. The colors can be indexed in the list,
 #' but can also be used as a non-named string by using:
 #' norment.<color>
+#' 
+#' @usage 
+#' norment_colors
 #'
 #' @export
 
