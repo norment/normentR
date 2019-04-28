@@ -7,6 +7,7 @@
 \format{An object of class \code{character} of length 11.}
 \usage{
 norment_colors
+norment_colours
 }
 \description{
 This script contains definitions of the NORMENT colors. Colors are taken

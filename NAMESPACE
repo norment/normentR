@@ -2,10 +2,12 @@
 
 export(available_palettes)
 export(norment_colors)
+export(norment_colours)
 export(norment_cols)
 export(norment_pal)
 export(norment_palette)
 export(scale_color_norment)
+export(scale_colour_norment)
 export(scale_fill_norment)
 export(shift_axes)
 export(show_norment_logo)

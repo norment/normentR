@@ -9,6 +9,7 @@
 #' 
 #' @usage 
 #' norment_colors
+#' norment_colours
 #'
 #' @export
 
@@ -37,3 +38,6 @@ norment.black <- norment_colors[["black"]]
 norment.grey <- norment_colors[["grey"]]
 norment.light_grey <- norment_colors[["light grey"]]
 norment.white <- norment_colors[["white"]]
+
+#' @export
+norment_colours <- norment_colors
