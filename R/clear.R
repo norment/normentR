@@ -10,6 +10,7 @@
 #' clear()
 #' clear(remove = "var")
 #' clear(remove = "var*")
+#' clear(remove = c("var1","var2"))
 #' clear(keep = "var")
 #' clear(keep = "var*")
 
@@ -33,7 +34,7 @@ clear <- function(remove = NULL, keep = NULL) {
       
     } else if (is.null(remove) && !is.null(keep)) {
       
-      has.wc[it] <- grep(i, "*")
+      has.wc <- grep(keep, "*")
       
       if (!is.character(keep)) {
         warning("Input is not a character")

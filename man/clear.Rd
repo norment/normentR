@@ -7,6 +7,7 @@
 clear()
 clear(remove = "var")
 clear(remove = "var*")
+clear(remove = c("var1","var2"))
 clear(keep = "var")
 clear(keep = "var*")
 }
