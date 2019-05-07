@@ -7,7 +7,7 @@
 #' in the `AddSigSNPs` field (logical). The parameters of the significant column 
 #' are `SigCHR` to specify which chromosome the significant column should appear 
 #' in (integer between 1 and 22), and the number of significant columns  in 
-#' `nSigCols` (integer).
+#' `nSigCols` (integer). 
 #' Other parameters are the number of SNPs (`nSNPs`) in the fake dataset, and 
 #' the number of individuals in the dataset. Note that these last two parameters 
 #' are subject to change due to the algorithm by which random data is generated 
