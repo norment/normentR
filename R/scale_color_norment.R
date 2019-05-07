@@ -13,7 +13,7 @@
 #' @usage
 #' plot.obj + scale_color_norment(discrete = FALSE, palette = "gradient", reverse = TRUE)
 #' plot.obj + scale_colour_norment(discrete = TRUE, palette = "mixed", reverse = FALSE)
-
+#'
 #' @export
 
 scale_color_norment <- function(discrete = TRUE, palette = "default", reverse = FALSE, ...) {
