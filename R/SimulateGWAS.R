@@ -12,6 +12,9 @@
 #' the number of individuals in the dataset. Note that these last two parameters 
 #' are subject to change due to the algorithm by which random data is generated 
 #' in this function.
+#' A known bug is that the data can be a little "tail-heavy" towards the smaller
+#' chromosomes.
+#' 
 #' 
 #' @param 
 #' nSNPs
@@ -29,14 +32,14 @@
 #'
 #' @export
 
-SimulateGWAS <- function(nSNPs = 5e5, 
+simulateGWAS <- function(nSNPs = 5e5, 
                         N = 2e4, 
                         AddSigSNPs = TRUE,
                         SigCHR = NULL,
                         nSigCols = NULL) {
   
   if (is.null(nSigCols)) nSigCols <- 1
-  if (is.null(SigCHR)) SigCHR <- sample(1:16,nSigCols)
+  if (is.null(SigCHR)) SigCHR <- sample(1:16,nSigCols,replace = TRUE)
   if (length(SigCHR) != nSigCols) {
     warning("Length of SigCHR does not match nSigCols")
     SigCHR <- rep(SigCHR,4)
@@ -61,19 +64,21 @@ SimulateGWAS <- function(nSNPs = 5e5,
   tnmiss <- round(rnorm(2*l, mean = N, sd=1e2))
   tnmiss <- tnmiss[tnmiss < (mean(tnmiss) + 0.25*sd(tnmiss))]
   NMISS <- sample(tnmiss,l, replace = TRUE)
-  
+
   cat("3. Generating BETA\n")
-  BETA <- rnorm(l, mean = 9.25e-05, sd=0.15)
+  tbeta <- rnorm(l, mean = 9.25e-05, sd=0.15)
+  tbeta <- tbeta * tbeta
+  BETA <- c(tbeta,-1*tbeta)
   
   cat("4. Generating SE\n")
-  tse <- rnorm(2*l, mean = 0.1, sd=0.1)
-  tse <- tse[tse > (mean(tse) - 0.25*sd(tse))]
+  tse <- rnorm(2*l, mean = 0.1, sd=0.25)
+  tse <- tse[tse > (mean(tse) - 0.05*sd(tse))]/2
   SE <- sample(tse,l, replace = TRUE)
-  
+
   cat("5. Generating R^2\n")
-  tr2 <- rnorm(2*l, mean = 3e-5, sd=1e-5)
-  tr2 <- tr2[tr2 > (mean(tr2) - 0.01*sd(tr2))]
-  R2 <- sample(tr2,l, replace = TRUE)
+  tr2 <- rlnorm(2*l, meanlog = 2, sdlog = 1)/1.5e5
+  tr2 <- tr2[tr2 < 2.5e-3]
+  R2 <- sample(tr2,l, replace = FALSE)
   
   cat("6. Generating T-values\n")
   T <- rnorm(l, mean = 0, sd = 1)
