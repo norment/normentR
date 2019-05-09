@@ -15,19 +15,17 @@
 #' A known bug is that the data can be a little "tail-heavy" towards the smaller
 #' chromosomes.
 #' 
-#' 
-#' @param 
-#' nSNPs
-#' N
-#' AddSigSNPs
-#' SigCHR
-#' nSigCols
+#' @param nSNPs Number of SNPs in datafile (roughly)
+#' @param N Number of individuals in dataset
+#' @param AddSigSNPs Add significant SNPs (logical)
+#' @param SigCHR Chromosome(s) with the significant SNPs
+#' @param nSigCols Number of significant columns
 #'
 #' @usage 
-#' sim.dat <- SimulateGWAS()
-#' sim.dat <- SimulateGWAS(nSNPs = 5e5, N = 2e4, 
+#' sim.dat <- simulateGWAS()
+#' sim.dat <- simulateGWAS(nSNPs = 5e5, N = 2e4, 
 #'    AddSigSNPs = FALSE, SigCHR = NULL, nSigCols = NULL)
-#' sim.dat <- SimulateGWAS(nSNPs = 2e5, N = 6e5, 
+#' sim.dat <- simulateGWAS(nSNPs = 2e5, N = 6e5, 
 #'    AddSigSNPs = TRUE, SigCHR = c(2,4,6,7), nSigCols = 4)
 #'
 #' @export

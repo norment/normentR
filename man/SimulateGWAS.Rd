@@ -4,17 +4,22 @@
 \alias{simulateGWAS}
 \title{Simulate GWAS data}
 \usage{
-sim.dat <- SimulateGWAS()
-sim.dat <- SimulateGWAS(nSNPs = 5e5, N = 2e4, 
+sim.dat <- simulateGWAS()
+sim.dat <- simulateGWAS(nSNPs = 5e5, N = 2e4, 
    AddSigSNPs = FALSE, SigCHR = NULL, nSigCols = NULL)
-sim.dat <- SimulateGWAS(nSNPs = 2e5, N = 6e5, 
+sim.dat <- simulateGWAS(nSNPs = 2e5, N = 6e5, 
    AddSigSNPs = TRUE, SigCHR = c(2,4,6,7), nSigCols = 4)
 }
 \arguments{
-\item{nSNPs}{N
-AddSigSNPs
-SigCHR
-nSigCols}
+\item{nSNPs}{Number of SNPs in datafile (roughly)}
+
+\item{N}{Number of individuals in dataset}
+
+\item{AddSigSNPs}{Add significant SNPs (logical)}
+
+\item{SigCHR}{Chromosome(s) with the significant SNPs}
+
+\item{nSigCols}{Number of significant columns}
 }
 \description{
 This function serves to simulate GWAS data. The output resembles that of the 
@@ -24,7 +29,7 @@ scripts. Default setting is to create one significant column. This can be set
 in the `AddSigSNPs` field (logical). The parameters of the significant column 
 are `SigCHR` to specify which chromosome the significant column should appear 
 in (integer between 1 and 22), and the number of significant columns  in 
-`nSigCols` (integer).
+`nSigCols` (integer). 
 Other parameters are the number of SNPs (`nSNPs`) in the fake dataset, and 
 the number of individuals in the dataset. Note that these last two parameters 
 are subject to change due to the algorithm by which random data is generated 
