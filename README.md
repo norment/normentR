@@ -1,4 +1,5 @@
 # normentR <img src="man/figures/logo_wname.png" align="right" alt="" width="160" />
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 The very much unofficial package with tools to create plots in `ggplot` using the NORMENT house style and other functionality tools useful for R users at NORMENT.
 
