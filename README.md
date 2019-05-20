@@ -11,7 +11,7 @@ devtools::install_github("norment/normentR", auth_token = <token>)
 ```
 
 ## Functionality
-The functions and tools in this package are:
+The functions and tools in this package are: 
 ```{r, eval = FALSE}
 theme_norment()
 scale_color_norment(discrete = TRUE, palette = "default")
