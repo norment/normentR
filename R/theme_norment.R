@@ -36,14 +36,20 @@ theme_norment <- function(base_family = "sans",
                           axis_title_face = "plain",
                           axis_title_just = "c",
                           plot_margin = margin(30, 30, 30, 30),
-                          grid_col = norment_colors[["light grey"]],
                           grid = TRUE,
-                          axis_col = norment_colors[["light grey"]],
                           axis = FALSE,
+                          grid_col = NULL,
+                          axis_col = NULL,
+                          bg_col = NULL,
                           ticks = FALSE,
-                          transparent = FALSE) {
+                          transparent = FALSE,
+                          dark = FALSE) {
   
   #-- Settings for theme ---------------------
+  
+  if (is.null(grid_col)) grid_col <- ifelse(dark, norment_colors[["white"]], norment_colors[["light grey"]])
+  if (is.null(axis_col)) axis_col <- ifelse(dark, norment_colors[["white"]], norment_colors[["light grey"]])
+  if (is.null(bg_col)) bg_col <- ifelse(dark, "#1e1e1e", norment_colors[["white"]])
   
   theme.settings <- ggplot2::theme_minimal(base_family=base_family, base_size=base_size)
   
@@ -244,6 +250,20 @@ theme_norment <- function(base_family = "sans",
       complete = FALSE,
       validate = TRUE
     )
+  
+  if (dark) {
+    theme.settings <- theme.settings + 
+      theme(rect = element_rect(fill = bg_col, color = bg_col),
+            plot.background = element_rect(fill = bg_col, color = bg_col),
+            panel.background = element_rect(fill = bg_col, color = bg_col),
+            text = element_text(color = axis_col),
+            axis.text = element_text(color = axis_col),
+            title = element_text(color = norment_colors[["white"]]),
+            plot.title = element_text(color = norment_colors[["white"]]),
+            plot.subtitle = element_text(color = axis_col),
+            line = element_line(color = axis_col),
+            axis.ticks = element_line(color = axis_col))
+  }
   
   theme.settings
   
