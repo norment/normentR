@@ -20,6 +20,7 @@ URL: http://github.com/norment/normentR
 Depends:
     ggplot2,
     png,
+    pracma
 Imports:
     grid
 Suggests: 
