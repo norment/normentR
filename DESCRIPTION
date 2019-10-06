@@ -19,8 +19,7 @@ RoxygenNote: 6.1.1
 URL: http://github.com/norment/normentR
 Depends:
     ggplot2,
-    png,
-    pracma
+    png
 Imports:
     grid
 Suggests: 

@@ -2,10 +2,11 @@
 #'
 #' Calculate Cohen's d from the input to a T-test. Assign the input vectors you
 #' would input into a `t.test()` function into this function. This function will
-#' in turn calculate Cohen's D.
+#' in turn calculate Cohen's D. NOTE: this function works only for an
+#' independent samples T-test (for now).
 #' 
-#' @param n Number of calculations
-#' @param alpha Alpha level (default at 0.05)
+#' @param x vector or column with observations (numeric or integer)
+#' @param y vector or column with observations (numeric or integer)
 #'
 #' @usage 
 #' CohensD <- cohens_d(x = data1$x, y = data2$x)
