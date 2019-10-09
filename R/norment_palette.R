@@ -9,10 +9,37 @@
 #' "grey" uses only greyscale colors. For a full list of the available colors
 #' type: `available_palettes()`, and to show the palettes type:
 #' `show_norment_palette()`
+#' 
+#' @references The "scico" palettes included here were developed by Fabio 
+#' Crameri at the University of Oslo, and ported to R by Thomas Pedersen. The 
+#' "ggsci" were developed by Nan Xiao and were developed for his "ggisci" 
+#' package.
 #'
+#' @name norment_palette
 #' @export
 
-norment_palette <- list(
+# Get scico palettes
+load(system.file("scico_palettes.rda", package = "normentR"))
+
+rgb2hex <- function(df) rgb(df$r, df$g, df$b, maxColorValue = 1)
+
+scico <- list()
+for (i in names(scico_palettes)) {
+  foo <- scico_palettes[[i]]
+  foo.hex <- rgb2hex(foo)
+  scico[i] <- list(foo.hex)
+}
+
+# Get ggsci palettes
+load(system.file("ggsci_palettes.rda", package = "normentR"))
+
+ggsci <- list()
+for (i in names(ggsci_palettes)) {
+  foo.names <- names(ggsci_palettes[[i]])
+  ggsci[i] <- list(ggsci_palettes[[i]][[1]])
+}
+
+norment_manual_palette <- list(
   `default` = norment_cols("purple", "magenta", "blue", "green","yellow"),
   `logo` = norment_cols("purple", "light purple", "magenta", "light blue", "blue"),
   `purple`= norment_cols("purple", "light purple"),
@@ -25,3 +52,5 @@ norment_palette <- list(
   `powerpoint` = norment_cols("purple","magenta","grey","blue","green","yellow"),
   `grey`  = norment_cols("grey", "light grey")
 )
+
+norment_palette <- c(norment_manual_palette, scico, ggsci)
