@@ -26,12 +26,6 @@ clear()
 
 There are a few other scripts in this package, which are mainly used for color definitions and scripts to create the color definitions into formats that can be used with the `ggplot` function. More functionality will be added over time.
 
-## Simulate GWAS data
-The `simulateGWAS` function generates a simulated dataset with similar properties to the PLINK output of the `--assoc` flag. Columns, values, and properties are similar to a regular GWAS from a UK Biobank sample with a quantitative phenotype.
-
-## Functionality
-Over the duration of a long coding session in R, the workspace with the variables can clog up somewhat. The `clear` function attempts to answer some of this. It is nothing more than a wrapper for the `rm` function, but it takes input. It's possible to either remove all variables, remove specific variables only (either individuals or matching a string), or remove all variables except an individual variable or variables matching a string. The last is particularly useful for working with large datasets that take a long time to load. A warning is warranted because this is a function function that acts on the global environment (`.GlobalEnv`) from the function environment.
-
 ## Color Palettes
 All colors used in this package come from either the NORMENT design guide, or colors frequently used by NORMENT (such as in the logo or the order of the colors as used in the Powerpoint templates). Possible options for the color palette are stored in the function `available_palettes()`. To view all color palattes, type: `show_norment_palette()`. To view only one or more palettes, submit them as arguments into the last function as such: `show_norment_palette(c("default","gradient"))`.
 In addition to the NORMENT colors, I'd also recommend checking out the `scico` package, which contains a bunch of scientific color palettes for various purposes. These color palettes were developed by [Fabio Crameri](http://www.fabiocrameri.ch/colourmaps.php), researcher at the Centre for Earth Evolution and Dynamics, also at the University of Oslo. A paper on these color palettes has been published (also see [here](https://www.geosci-model-dev.net/11/2541/2018/)). The color palettes in the `scico` package are in most cases superior to the standard color palettes provided by `ggplot2` and can be interpreted by for individuals with color-blindness too. I might implement the `scico` color palettes to this package at a later stage.
@@ -45,3 +39,13 @@ show_norment_logo(plot.obj)
 # Shift axes to specific place on x- and y-axes
 shift_axes(plot.obj, x = 0, y = 0)
 ```
+## Statistics
+This package contains functions to extract some statistical properties from data, such as the effect size (`cohens_d()`), the standard error of the mean (`sem()`) and the family-wise error rate (`FWER()`).
+
+## Functionality
+I added a function to quickly and efficiently read in the TOP cleanfile, called the `readTOPdemographics()` function.
+The `%in%` operator is very useful, but sometimes one would like to extract the values that do NOT exist in another data frame. It is possible to just wrap the `%in%` operator in a negation, but I felt it was more intuitive to create a function that states more explicitely what it's doing, the `%!in%` function. This function particularly useful in cases where you need to find participants that do not exist in one datafile, so you can track the data from these individuals down down.
+Over the duration of a long coding session in R, the workspace with the variables can clog up somewhat. The `clear` function attempts to answer some of this. It is nothing more than a wrapper for the `rm` function, but it takes simpler input. It's possible to either remove all variables, remove specific variables only (either individuals or matching a string), or remove all variables except an individual variable or variables matching a string. The last is particularly useful for working with large datasets that take a long time to load. A warning is warranted because this is a function that acts on the global environment (`.GlobalEnv`) from the function environment.
+
+## Simulate GWAS data
+The `simulateGWAS` function generates a simulated dataset with similar properties to the PLINK output of the `--assoc` flag. Columns, values, and properties are similar to a regular GWAS from a UK Biobank sample with a quantitative phenotype.

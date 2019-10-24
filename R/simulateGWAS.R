@@ -37,10 +37,10 @@ simulateGWAS <- function(nSNPs = 5e5,
                          nSigCols = NULL) {
   
   if (is.null(nSigCols)) nSigCols <- 1
-  if (is.null(SigCHR)) SigCHR <- sample(1:16,nSigCols,replace = TRUE)
+  if (is.null(SigCHR)) SigCHR <- sample(1:16, nSigCols, replace = TRUE)
   if (length(SigCHR) != nSigCols) {
     warning("Length of SigCHR does not match nSigCols")
-    SigCHR <- rep(SigCHR,4)
+    SigCHR <- rep(SigCHR, 4)
   }
   SigCHR <- SigCHR[order(SigCHR)]
   
@@ -99,7 +99,7 @@ simulateGWAS <- function(nSNPs = 5e5,
   # Add significant hits
   if (AddSigSNPs) {
     for (i in 1:length(SigCHR)) {
-      cat(sprintf("%s. Adding significant column in chromosome %s\n",7+i,SigCHR[i]))
+      cat(sprintf("%s. Adding significant column in chromosome %s\n", 7+i, SigCHR[i]))
       temp.to.add <- out[out$CHR == SigCHR[i], ]
       sigloc <- round(sample(nrow(temp.to.add), 1))
       sigs <- temp.to.add[rep(sigloc,20), ]

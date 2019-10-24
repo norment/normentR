@@ -28,8 +28,8 @@ cohens_d <- function(x = NULL, y = NULL) {
   M2 <- mean(y)
   s2 <- sd(y)
   
-  sdp <- sqrt((s1^2 + s2^2) / 2)
-  d <- (M1 - M2) / sdp
+  sd_pooled <- sqrt((s1^2 + s2^2) / 2)
+  d <- (M1 - M2) / sd_pooled
   
   return(d)
 }
