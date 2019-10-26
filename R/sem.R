@@ -13,11 +13,11 @@
 #'
 #' @export
 
-sem <- function(x, na.rm = FALSE) {
+sem <- function(x = NULL, na.rm = FALSE) {
 
   if (is.null(x)) { warning("x cannot be empty, no default is available for x, please assign a numeric or integer vector"); return() } 
   if (length(x) == 0) { warning("x cannot be empty, no default is available for x, please assign a numeric or integer vector"); return() } 
-  if (!is.numeric(x) | !is.integer(x)) { warning("x has to be a numeric or integer vector of length > 1"); return() } 
+  if (!is.numeric(x) & !is.integer(x)) { warning("x has to be a numeric or integer vector of length > 1"); return() } 
   
   if (na.rm) { x <- na.omit(x) }
   
