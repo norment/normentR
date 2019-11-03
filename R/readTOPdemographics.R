@@ -1,6 +1,6 @@
 #' Import TOP demographic data
 #'
-#' Imports the TOP demographics as a data frame, i.e. the CLEANFILES. It 
+#' On TSD, imports the TOP demographics as a data frame, i.e. the CLEANFILES. It 
 #' automatically assigns the correct attributes to some key variables, other 
 #' variables need to be set manually afterwards, e.g. via the `mutate()` 
 #' function.
@@ -14,6 +14,8 @@
 #' `demogr_only` option to `TRUE`. This will then import only about 20 key 
 #' demographic variables.
 #' 
+#' Disclaimer: this function works only on TSD
+#' 
 #' @param file file path if different from default cleanfiles
 #' @param demogr_only TRUE/FALSE whether only key variables should be imported
 #'
@@ -24,24 +26,33 @@
 #' @import dplyr readr
 #' @export
 
-readTOPdemographics <- function(file = NULL, demogr_only = FALSE) {
+readTOPdemographics <- function(demogr_only = FALSE) {
   
   library(dplyr)
   library(readr)
   
-  if (is.null(file) & Sys.info()[['sysname']] != "Darwin"){
-    message("No file path supplied, assuming you're working on TSD")
+  if (Sys.info()[['sysname']] != "Darwin") {
     if (Sys.info()[['sysname']] == "Linux") {
-      file <- "/tsd/p33/data/durable/groups/clinical/projects/top/CLEANFILES/CLEAN1800.csv"
+      if (!dir.exists("/tsd/p33/")) {
+        message("This functions works only on TSD, quitting")
+      }
     } else if (Sys.info()[['sysname']] == "Windows") {
-      file <- "N:\\data\\durable\\groups\\clinical\\projects\\top\\CLEANFILES\\CLEAN1800.csv"
+      if (!dir.exists("N:\\data\\durable\\")) {
+        message("This functions works only on TSD, quitting")
+      }
     } else {
       message("Unknown operating system, quitting")
       return()
     }
   } else {
-    message("It seems you're working on a Mac, no default file path exists, please supply a path in the `file` option, quitting")
+    message("It seems you're working on a Mac, this functions works only on TSD, quitting")
     return()
+  }
+  
+  if (Sys.info()[['sysname']] == "Linux") {
+    file <- "/tsd/p33/data/durable/groups/clinical/projects/top/CLEANFILES/CLEAN1800.csv"
+  } else if (Sys.info()[['sysname']] == "Windows") {
+    file <- "N:\\data\\durable\\groups\\clinical\\projects\\top\\CLEANFILES\\CLEAN1800.csv"
   }
   
   # Specify column types

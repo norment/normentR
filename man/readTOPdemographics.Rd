@@ -8,12 +8,12 @@ TOPdata <- readTOPdemographics()
 TOPdata <- readTOPdemographics(file = "<path to file>", demogr_only = TRUE)
 }
 \arguments{
-\item{file}{file path if different from default cleanfiles}
-
 \item{demogr_only}{TRUE/FALSE whether only key variables should be imported}
+
+\item{file}{file path if different from default cleanfiles}
 }
 \description{
-Imports the TOP demographics as a data frame, i.e. the CLEANFILES. It 
+On TSD, imports the TOP demographics as a data frame, i.e. the CLEANFILES. It 
 automatically assigns the correct attributes to some key variables, other 
 variables need to be set manually afterwards, e.g. via the `mutate()` 
 function.
@@ -26,4 +26,7 @@ there are more than 1000), if you're interested in the key demographic
 variables only, such as age, diagnosis, date of interview, etc., then set the 
 `demogr_only` option to `TRUE`. This will then import only about 20 key 
 demographic variables.
+}
+\details{
+Disclaimer: this function works only on TSD
 }
