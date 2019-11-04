@@ -1,7 +1,7 @@
 # normentR <img src="man/figures/logo_wname.png" align="right" alt="" width="160" />
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
-The very much unofficial package with tools to create plots in `ggplot` using the NORMENT house style and other functionality tools useful for R users at NORMENT. Some example uses of this package are discussed [here](http://www.danielroelfs.com/introtobasicstatisticsinr/).2
+The very much unofficial package with tools to create plots in `ggplot` using the NORMENT house style and other functionality tools useful for R users at NORMENT. Some example uses of this package are discussed [here](http://www.danielroelfs.com/introtobasicstatisticsinr/).
 
 ## Installation
 This package is not available on CRAN, and likely won't be for the forseeable future. The only way to install it is by either getting the source file for installation on the TSD or any other machine without internet connection or installing it using the `{devtools}` package (which is recommended). The latter option requires the `{devtools}` package to be installed. Alternatively, it's possible to install the source package by downloading this package from the GitHub, by downloading a source file from the wiki, or by asking [Daniel](mailto:daniel.roelfs@medisin.uio.no) for the source file.
