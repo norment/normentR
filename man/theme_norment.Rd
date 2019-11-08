@@ -16,7 +16,8 @@ theme_norment(base_family = "sans", base_size = 12,
   axis_title_size = 11.5, axis_title_face = "plain",
   axis_title_just = "c", plot_margin = margin(30, 30, 30, 30),
   grid = TRUE, axis = FALSE, grid_col = NULL, axis_col = NULL,
-  bg_col = NULL, ticks = FALSE, transparent = FALSE, dark = FALSE)
+  ticks = FALSE, legend = TRUE, bg_col = NULL, transparent = FALSE,
+  dark = FALSE)
 }
 \description{
 This is a theme developed for use in combination with the `ggplot2` package.

@@ -40,8 +40,9 @@ theme_norment <- function(base_family = "sans",
                           axis = FALSE,
                           grid_col = NULL,
                           axis_col = NULL,
-                          bg_col = NULL,
                           ticks = FALSE,
+                          legend = TRUE,
+                          bg_col = NULL,
                           transparent = FALSE,
                           dark = FALSE) {
   
@@ -210,7 +211,7 @@ theme_norment <- function(base_family = "sans",
       #legend.text.align = element_blank(),
       #legend.title = element_blank(),
       #legend.title.align = element_blank(),
-      legend.position = "bottom",
+      #legend.position = "bottom",
       #legend.direction = "vertical",
       #legend.justification = element_blank(),
       #legend.box = element_blank(),
@@ -251,6 +252,14 @@ theme_norment <- function(base_family = "sans",
       validate = TRUE
     )
   
+  if (legend) {
+    theme.settings <- theme.settings + 
+      theme(legend.position = "bottom")
+  } else {
+    theme.settings <- theme.settings + 
+      theme(legend.position = "none")
+  }
+  
   if (dark) {
     theme.settings <- theme.settings + 
       theme(rect = element_rect(fill = bg_col, color = bg_col),
@@ -265,6 +274,6 @@ theme_norment <- function(base_family = "sans",
             axis.ticks = element_line(color = axis_col))
   }
   
-  theme.settings
+  return(theme.settings)
   
 }
