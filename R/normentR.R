@@ -5,7 +5,7 @@
 #' NORMENT.
 #'
 #' @section Functionality:
-#' For a full list of the functions, type:
+#' For a full list of the exports, type:
 #' `ls(getNamespace("normentR"))`
 #' You can then get the documentation for each function by typing:
 #' `?<function name>`

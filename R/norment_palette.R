@@ -16,7 +16,7 @@
 #' package.
 #'
 #' @name norment_palette
-#' @export
+#' @export norment_palette
 
 # Get scico palettes
 load(system.file("scico_palettes.rda", package = "normentR"))
@@ -50,7 +50,8 @@ norment_manual_palette <- list(
   `spectrum` = norment_cols("purple","white","blue"),
   `profile` = norment_cols("grey","magenta","purple","blue","green","yellow"),
   `powerpoint` = norment_cols("purple","magenta","grey","blue","green","yellow"),
-  `grey`  = norment_cols("grey", "light grey")
+  `grey`  = norment_cols("grey", "light grey"),
+  `random` = sample(norment_cols("purple", "light purple", "magenta", "blue", "light blue", "green","yellow"))
 )
 
 norment_palette <- c(norment_manual_palette, scico, ggsci)

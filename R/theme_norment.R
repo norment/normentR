@@ -37,8 +37,10 @@ theme_norment <- function(base_family = "sans",
                           axis_title_just = "c",
                           plot_margin = margin(30, 30, 30, 30),
                           grid = TRUE,
-                          axis = FALSE,
+                          grid.y = TRUE,
+                          grid.x = TRUE,
                           grid_col = NULL,
+                          axis = FALSE,
                           axis_col = NULL,
                           ticks = FALSE,
                           legend = TRUE,
@@ -164,7 +166,8 @@ theme_norment <- function(base_family = "sans",
   #-- Additional theme settings ---------------------
   
   theme.settings <- theme.settings +
-    theme(#line = element_blank(),
+    theme(
+      #line = element_blank(),
       rect = element_rect(),
       text = element_text(),
       title = element_text(),
@@ -252,12 +255,12 @@ theme_norment <- function(base_family = "sans",
       validate = TRUE
     )
   
-  if (legend) {
-    theme.settings <- theme.settings + 
-      theme(legend.position = "bottom")
-  } else {
+  if (!legend) {
     theme.settings <- theme.settings + 
       theme(legend.position = "none")
+  } else {
+    theme.settings <- theme.settings + 
+      theme(legend.position = "bottom")
   }
   
   if (dark) {
