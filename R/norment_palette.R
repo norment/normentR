@@ -51,7 +51,7 @@ norment_manual_palette <- list(
   `profile` = norment_cols("grey","magenta","purple","blue","green","yellow"),
   `powerpoint` = norment_cols("purple","magenta","grey","blue","green","yellow"),
   `grey`  = norment_cols("grey", "light grey"),
-  `random` = sample(norment_cols("purple", "light purple", "magenta", "blue", "light blue", "green","yellow"))
+  `random` = norment_cols("purple", "light purple", "magenta", "blue", "light blue", "green","yellow")
 )
 
 norment_palette <- c(norment_manual_palette, scico, ggsci)
