@@ -4,20 +4,42 @@
 \alias{theme_norment}
 \title{NORMENT theme for ggplot objects}
 \usage{
-theme_norment(base_family = "sans", base_size = 12,
-  plot_title_family = base_family, plot_title_size = 18,
-  plot_title_face = "bold", plot_title_margin = 10,
-  subtitle_family = base_family, subtitle_size = 12,
-  subtitle_face = "plain", subtitle_margin = 15,
-  strip_text_family = base_family, strip_text_size = 12,
-  strip_text_face = "plain", caption_family = base_family,
-  caption_size = 9, caption_face = "italic", caption_margin = 10,
-  axis_text_size = base_size, axis_title_family = subtitle_family,
-  axis_title_size = 11.5, axis_title_face = "plain",
-  axis_title_just = "c", plot_margin = margin(30, 30, 30, 30),
-  grid = TRUE, grid.y = TRUE, grid.x = TRUE, grid_col = NULL,
-  axis = FALSE, axis_col = NULL, ticks = FALSE, legend = TRUE,
-  bg_col = NULL, transparent = FALSE, dark = FALSE)
+theme_norment(
+  base_family = "sans",
+  base_size = 12,
+  plot_title_family = base_family,
+  plot_title_size = 18,
+  plot_title_face = "bold",
+  plot_title_margin = 10,
+  subtitle_family = base_family,
+  subtitle_size = 12,
+  subtitle_face = "plain",
+  subtitle_margin = 15,
+  strip_text_family = base_family,
+  strip_text_size = 12,
+  strip_text_face = "plain",
+  caption_family = base_family,
+  caption_size = 9,
+  caption_face = "italic",
+  caption_margin = 10,
+  axis_text_size = base_size,
+  axis_title_family = subtitle_family,
+  axis_title_size = 11.5,
+  axis_title_face = "plain",
+  axis_title_just = "c",
+  plot_margin = margin(30, 30, 30, 30),
+  grid = TRUE,
+  grid.y = TRUE,
+  grid.x = TRUE,
+  grid_col = NULL,
+  axis = FALSE,
+  axis_col = NULL,
+  ticks = FALSE,
+  legend = TRUE,
+  bg_col = NULL,
+  transparent = FALSE,
+  dark = FALSE
+)
 }
 \description{
 This is a theme developed for use in combination with the `ggplot2` package.

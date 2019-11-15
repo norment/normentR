@@ -4,8 +4,7 @@
 \alias{scale_fill_norment}
 \title{ggplot scale_fill element}
 \usage{
-scale_fill_norment(palette = "default", discrete = TRUE,
-  reverse = FALSE, ...)
+scale_fill_norment(palette = "default", discrete = TRUE, reverse = FALSE, ...)
 }
 \description{
 Add the NORMENT colors to a ggplot object. This function can be used as one

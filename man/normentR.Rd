@@ -3,7 +3,6 @@
 \docType{package}
 \name{normentR}
 \alias{normentR}
-\alias{normentR-package}
 \title{normentR - the unofficial NORMENT R package}
 \description{
 The very much unofficial package with tools to create plots in `ggplot` using 
@@ -12,7 +11,7 @@ NORMENT.
 }
 \section{Functionality}{
 
-For a full list of the functions, type:
+For a full list of the exports, type:
 `ls(getNamespace("normentR"))`
 You can then get the documentation for each function by typing:
 `?<function name>`

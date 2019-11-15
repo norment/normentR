@@ -4,8 +4,14 @@
 \alias{show_norment_logo}
 \title{Show the NORMENT logo on your ggplot object}
 \usage{
-show_norment_logo(plot.obj = plot, with.name = FALSE, pos = c(0.96,
-  0.05), just = "center", size = unit(25, "points"), ...)
+show_norment_logo(
+  plot.obj = plot,
+  with.name = FALSE,
+  pos = c(0.96, 0.05),
+  just = "center",
+  size = unit(25, "points"),
+  ...
+)
 }
 \description{
 This function adds the NORMENT logo as a layer on top of your ggplot object.
