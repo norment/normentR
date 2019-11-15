@@ -17,11 +17,11 @@
 #' @export
 
 scale_color_norment <- function(discrete = TRUE, palette = "default", reverse = FALSE, ...) {
-  pal = norment_pal(palette = palette, reverse = reverse)
+  pal <- norment_pal(palette = palette, reverse = reverse)
   if (discrete) {
-    discrete_scale("color", paste0("norment_", palette), palette = pal, ...)
+    return(discrete_scale("color", paste0("norment_", palette), palette = pal, ...))
   } else {
-    scale_color_gradientn(colours = pal(256), ...)
+    return(scale_color_gradientn(colours = pal(256), ...))
   }
 }
 

@@ -2,12 +2,13 @@
 #'
 #' @export
 
-norment_pal <- function(palette = "default", reverse = FALSE, ...) {
+norment_pal <- function(palette = "default", reverse = FALSE,...) {
+  set.seed(as.numeric(Sys.time()))
   if (palette == "random") {
-    set.seed(as.numeric(Sys.time()))
     pal <- sample(norment_palette[[palette]])
+  } else {
+    pal <- norment_palette[[palette]]
   }
-  pal <- norment_palette[[palette]]
   if (reverse) pal <- rev(pal)
-  colorRampPalette(pal, ...)
+  return(colorRampPalette(pal, ...))
 }

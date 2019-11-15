@@ -13,8 +13,8 @@
 scale_fill_norment <- function(palette = "default", discrete = TRUE, reverse = FALSE, ...) {
   pal = norment_pal(palette = palette, reverse = reverse)
   if (discrete) {
-    discrete_scale("fill", paste0("norment_", palette), palette = pal, ...)
+    return(discrete_scale("fill", paste0("norment_", palette), palette = pal, ...))
   } else {
-    scale_fill_gradientn(colours = pal(256), ...)
+    return(scale_fill_gradientn(colours = pal(256), ...))
   }
 }
