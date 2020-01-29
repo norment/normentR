@@ -1,7 +1,7 @@
 Package: normentR
 Type: Package
 Title: NORMENT's Collected Plotting and Functionality Package for R
-Version: 0.1.2
+Version: 0.1.3
 Author@R: person("Daniel", "Roelfs", email = "daniel.roelfs@medisin.uio.no",
                role = c("aut", "cre"))
 Author: Daniel Roelfs [aut, cre]
@@ -18,11 +18,11 @@ LazyData: true
 RoxygenNote: 7.0.0
 URL: http://github.com/norment/normentR
 Depends:
-    ggplot2,
-    dplyr,
-    readr,
-    png
+    R (>= 3.5)
 Imports:
-    grid
+    ggplot2,
+    png,
+    grid,
+    pracma
 Suggests: 
     scico
