@@ -18,11 +18,11 @@ LazyData: true
 RoxygenNote: 7.0.0
 URL: http://github.com/norment/normentR
 Depends:
-    R (>= 3.5)
-Imports:
+    R (>= 3.5),
     ggplot2,
     png,
-    grid,
     pracma
+Imports:
+    grid
 Suggests: 
     scico
