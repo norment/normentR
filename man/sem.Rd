@@ -10,10 +10,10 @@ rSEM <- sem(c(NA,sample(1:100,50)), na.rm = TRUE)
 \arguments{
 \item{x}{Vector with numeric or integer data}
 
-\item{na.rm}{Remove NA's (TRUE/FALSE)}
+\item{na.rm}{Remove \code{NA}'s (\code{TRUE}/\code{FALSE})}
 }
 \description{
-Calculate the standard error of the mean (SEM) on a vector of data. Takes
-input either with or without NA's, and will then take input as to what to do
-with the NA's in the `na.rm` option.
+Calculate the standard error of the mean (SEM) on a vector of data. 
+Takes input either with or without \code{NA}'s, and will then take input as to what 
+to do with the \code{NA}'s in the \code{na.rm} option.
 }

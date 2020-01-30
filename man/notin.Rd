@@ -3,12 +3,13 @@
 \name{notin}
 \alias{notin}
 \alias{\%!in\%}
-\title{Negation of the infix 'in' operator}
+\title{Negation of the infix \%in\% operator}
 \usage{
 x \%!in\% y
 }
 \description{
-This function is the opposite of the "%in%" operator. It works the same, and
-can be used in the same situations. It selects all cases not in another
-vector. Output is TRUE or FALSE, never NA.
+This function is the opposite of the \code{\%in\%} operator. 
+It works the same, and can be used in the same situations. 
+It selects all cases not in another vector. Output is \code{TRUE} or \code{FALSE}, 
+never \code{NA}.
 }

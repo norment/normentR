@@ -1,20 +1,20 @@
 #' Matrix modifications
 #'
-#' Performs matrix modifications:
-#' get.full.matrix()
-#' get.upper.half.matrix()
-#' get.lower.half.matrix
+#' Performs matrix modifications:\cr
+#' \code{get.full.matrix()}\cr
+#' \code{get.upper.half.matrix()}\cr
+#' \code{get.lower.half.matrix}\cr
 #' 
 #' Credit: Tobias Kaufmann
 
-#' @title get.upper.half.matrix
+#' @title Get upper half of matrix
 #' 
 #' 
 #' @author Daniel Roelfs
-#' @name get.upper.half.matrix
+#' @name get_upper_half_matrix
 #' @export
 
-get.upper.half.matrix <- function(vector, nnodes) {
+get_upper_half_matrix <- function(vector, nnodes) {
   m <- matrix(NA, nrow = nnodes, ncol = nnodes)
   s <- nnodes - 1
   e <- nnodes - 1
@@ -28,31 +28,31 @@ get.upper.half.matrix <- function(vector, nnodes) {
   return(m)
 }
 
-#' @title get.lower.half.matrix
+#' @title Get lower half of matrix
 #' 
 #' Credit: Tobias Kaufmann
 #' 
 #' @author Tobias Kaufmann
-#' @name get.lower.half.matrix
+#' @name get_lower_half_matrix
 #' @export
 
-get.lower.half.matrix <- function(vector, nnodes) {
+get_lower_half_matrix <- function(vector, nnodes) {
   m <- matrix(NA, nrow = nnodes, ncol = nnodes)
   m[lower.tri(m)] <- vector
   return(m) 
 }
 
-#' @title get.full.matrix
+#' @title Get full matrix
 #' 
 #' Credit: Tobias Kaufmann
 #' 
 #' @author Tobias Kaufmann
-#' @name get.full.matrix
+#' @name get_full_matrix
 #' @importFrom pracma flipud
 #' @importFrom pracma rot90
 #' @export
 
-get.full.matrix <- function(vector, nnodes) {
+get_full_matrix <- function(vector, nnodes) {
   
   m <- matrix(0, nrow = nnodes, ncol = nnodes)
   m[lower.tri(m)] <- vector

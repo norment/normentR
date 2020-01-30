@@ -15,6 +15,6 @@ directly from the NORMENT house design document. It also includes colors used
 in the NORMENT logo and some other useful colors for greyscale documents that
 fit well with the NORMENT theme also. The colors can be indexed in the list,
 but can also be used as a non-named string by using:
-norment.<color>
+\code{norment.<color>}
 }
 \keyword{datasets}

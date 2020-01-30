@@ -1,5 +1,6 @@
 #' Get NORMENT palette colors
 #'
+#' @keywords internal
 #' @export
 
 norment_pal <- function(palette = "default", reverse = FALSE,...) {

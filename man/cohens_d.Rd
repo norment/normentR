@@ -4,7 +4,7 @@
 \alias{cohens_d}
 \title{Calculate Cohen's d}
 \usage{
-CohensD <- cohens_d(x = data1$x, y = data2$x)
+CohensD <- cohens_d(x = data$x, y = data$y)
 CohensD <- cohens_d(x = rnorm(n = 20, mean = 5, sd = 1),
                     y = rnorm(n = 20, mean = 6, sd = 0.5))
 }
@@ -15,7 +15,7 @@ CohensD <- cohens_d(x = rnorm(n = 20, mean = 5, sd = 1),
 }
 \description{
 Calculate Cohen's d from the input to a T-test. Assign the input vectors you
-would input into a `t.test()` function into this function. This function will
-in turn calculate Cohen's D. NOTE: this function works only for an
-independent samples T-test (for now).
+would input into a \code{t.test()} function into this function. 
+This function will n turn calculate Cohen's d.
+NOTE: this function works only for an independent samples T-test (for now).
 }

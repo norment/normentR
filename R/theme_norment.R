@@ -1,22 +1,22 @@
 #' NORMENT theme for ggplot objects
 #'
-#' This is a theme developed for use in combination with the `ggplot2` package.
+#' This is a theme developed for use in combination with the \code{ggplot2} package.
 #' It adds the default NORMENT font (Arial, support for other fonts used by
 #' NORMENT might be added later). There's quite some space for text and
 #' explanation, e.g. title, subtitle, caption, and so on. This theme is highly
 #' adaptable, so many elements in each plot can be formatted to personal taste.
 #' While this function contains the general style of the plot, it does not
 #' automatically use the NORMENT colors on data presented in the plot. In order
-#' to use the NORMENT colors also, please refer to the `scale_color_norment` and
-#' the `scale_fill_norment` functions, also included in the `normentR` package.
+#' to use the NORMENT colors also, please refer to the \code{scale_color_norment} and
+#' the \code{scale_fill_norment} functions, also included in the \code{normentR} package.
 #'
 #' @import ggplot2
 #' @export
 
 theme_norment <- function(base_family = "sans",
-                          base_size = 12,
+                          base_size = 9, # was 12
                           plot_title_family = base_family,
-                          plot_title_size = 18,
+                          plot_title_size = 16, # was 18
                           plot_title_face = "bold",
                           plot_title_margin = 10,
                           subtitle_family = base_family,
@@ -32,13 +32,11 @@ theme_norment <- function(base_family = "sans",
                           caption_margin = 10,
                           axis_text_size = base_size,
                           axis_title_family = subtitle_family,
-                          axis_title_size = 11.5, # was 9
+                          axis_title_size = 10.5, # was 9 and 11.5
                           axis_title_face = "plain",
                           axis_title_just = "c",
                           plot_margin = margin(30, 30, 30, 30),
                           grid = TRUE,
-                          grid.y = TRUE,
-                          grid.x = TRUE,
                           grid_col = NULL,
                           axis = FALSE,
                           axis_col = NULL,
@@ -54,12 +52,12 @@ theme_norment <- function(base_family = "sans",
   if (is.null(axis_col)) axis_col <- ifelse(dark, norment_colors[["white"]], norment_colors[["light grey"]])
   if (is.null(bg_col)) bg_col <- ifelse(dark, "#1e1e1e", norment_colors[["white"]])
   
-  theme.settings <- ggplot2::theme_minimal(base_family=base_family, base_size=base_size)
+  theme.settings <- ggplot2::theme_minimal(base_family = base_family, base_size = base_size)
   
   theme.settings <- theme.settings + theme(legend.background = element_blank())
   theme.settings <- theme.settings + theme(legend.key = element_blank())
   
-  if (inherits(grid, "character") | grid == TRUE) {
+  if (inherits(grid, "character") | isTRUE(grid)) {
     
     theme.settings <- theme.settings + theme(panel.grid = element_line(color = grid_col, size = 0.2))
     theme.settings <- theme.settings + theme(panel.grid.major = element_line(color = grid_col, size = 0.2))

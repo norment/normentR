@@ -12,9 +12,10 @@ clear(keep = "var")
 clear(keep = "var*")
 }
 \description{
-This function is a wrapper for the `rm()` function. This function takes a 
-pattern, which can include a wildcard (*, asterisk) in either the argument 
-`remove` or `keep` to either remove or keep all objects matching a string.
-It's possible to input multiple variable names in the `remove` argument, but 
-it's not (yet) possible for the `keep` argument.
+This function is a wrapper for the \code{rm()} function. 
+This function takes a pattern, which can include a wildcard (*, asterisk) 
+in either the argument \code{remove} or \code{keep} to either remove or keep 
+all objects matching a string.
+It's possible to input multiple variable names in the \code{remove} argument, 
+but it's not (yet) possible for the `keep` argument.
 }

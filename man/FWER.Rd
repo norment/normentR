@@ -13,6 +13,5 @@ PrFWER <- FWER(n = 72, alpha = 0.01)
 \item{alpha}{Alpha level (default at 0.05)}
 }
 \description{
-Calculate Family-Wise Error Rate (FWER) based on the number of comparisons 
-and the alpha level.
+Calculate Family-Wise Error Rate (FWER) based on the number of comparisons and the alpha level.
 }

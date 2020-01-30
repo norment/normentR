@@ -7,7 +7,7 @@
 get_outliers(vector = NULL)
 }
 \description{
-Get the outliers from a vector. Uses the `boxplot()` function to detect
+Get the outliers from a vector. Uses the \code{boxplot()} function to detect
 outliers. To remove outliers from a vector, use indexing using the output
-from this function or use the `remove_outliers()` function.
+from this function or use the \code{remove_outliers()} function.
 }

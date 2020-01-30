@@ -11,6 +11,13 @@
 #'
 #' @export
 
-signed_rank = function(x) {
-  sign(x) * rank(abs(x))
+signed_rank <- function(x) {
+  
+  if (!is.numeric(from) & !is.integer(from)) { warning("No numeric vector provided, please provide a numeric vector"); return() }
+  if (is.null(x)) { warning("x cannot be empty, no default is available for x, please assign a numeric or integer vector"); return() } 
+  if (length(x) == 0) { warning("x cannot be empty, no default is available for x, please assign a numeric or integer vector"); return() } 
+  
+  x_sign <- sign(x) * rank(abs(x))
+  
+  return(x_sign)
 }

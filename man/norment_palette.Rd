@@ -5,18 +5,18 @@
 \title{Definition of the NORMENT color palettes}
 \description{
 This list includes the default palettes included in the package. There are a
-few flavors to choose from, such as "default", which includes the default
-colors included in the NORMENT design guide, as well as "logo", which
-includes colors featured on the NORMENT logo, and a few more. "purple" and
-"blue" include only the purple and blue color variants of the NORMENT colors.
-"mixed" uses different colors to maximize color variance in the palette.
-"grey" uses only greyscale colors. For a full list of the available colors
-type: `available_palettes()`, and to show the palettes type:
-`show_norment_palette()`
+few flavors to choose from, such as \code{default}, which includes the default
+colors included in the NORMENT design guide, as well as \code{logo}, which
+includes colors featured on the NORMENT logo, and a few more. \code{purple} and
+\code{blue} include only the purple and blue color variants of the NORMENT colors.
+\code{mixed} uses different colors to maximize color variance in the palette.
+\code{grey} uses only greyscale colors. For a full list of the available colors
+type: \code{available_palettes()}, and to show the palettes type:
+\code{show_norment_palette()}
 }
 \references{
-The "scico" palettes included here were developed by Fabio 
+The \code{scico} palettes included here were developed by Fabio 
 Crameri at the University of Oslo, and ported to R by Thomas Pedersen. The 
-"ggsci" were developed by Nan Xiao and were developed for his "ggisci" 
+\code{ggsci} were developed by Nan Xiao and were developed for his \code{ggisci} 
 package.
 }

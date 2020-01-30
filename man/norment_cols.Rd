@@ -9,3 +9,4 @@ norment_cols(...)
 \description{
 Create a palette from the color definitions
 }
+\keyword{internal}

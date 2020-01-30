@@ -1,6 +1,6 @@
 #' Palette names
 #'
-#' Get names of available palettes.
+#' Get names of available palettes in the normentR package.
 #'
 #' @usage
 #' available_palettes()

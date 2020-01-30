@@ -4,15 +4,15 @@
 \alias{shift_axes}
 \title{Shift axes}
 \usage{
-shift_axes(plot.obj, x = 0, y = 0)
+shift_axes(plot.obj = NULL, x = 0, y = 0, axis.col = "#cccccc")
 }
 \description{
 This functions shifts the axes from the default position to a prespecified
 position on the x- or y-axis. This can be particularly useful for plots that
-have the null coordinate at x=0 and y=0. This function does not apply itself
-to the ggplot object directly, but rather takes the ggplot object as input.
-}
-\details{
-Usage as as follows
-shift_axes(ggobj, x = 0, y = 0)
+have the null coordinate at \code{x = 0} and \code{y = 0}. 
+This function does not apply itself to the ggplot object directly, so it can't
+be added as a layer, but rather takes the ggplot object as input.\cr
+\cr
+Minimal usage as follows:
+\code{shift_axes(ggobj, x = 0, y = 0)}
 }

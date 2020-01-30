@@ -1,20 +1,18 @@
 #' Show the NORMENT logo on your ggplot object
 #'
 #' This function adds the NORMENT logo as a layer on top of your ggplot object.
-#' You can specify whether you want the logo with the name or without. Please
-#' pay attention that if you use the logo with the name, that you likely have to
-#' reposition the logo with the "pos" variable. Minimal usage is as follows:
-#'
-#' show_norment_logo(ggobj)
-#'
-#' But more options can be set using the "with.name" option (TRUE/FALSE), the
-#' "pos" option which takes a relative vector for the position. "just" to tell
-#' it which justification to assume, and "size", which takes a "unit" element to
-#' scale the size of the logo to the desired size.
-#'
+#' You can specify whether you want the logo with the name or without. 
+#' Please pay attention that if you use the logo with the name, that you likely have to
+#' reposition the logo with the \code{pos} option. Minimal usage is as follows:
+#' \code{show_norment_logo(ggobj)}.\cr
+#' More options can be set using the \code{with.name} option (\code{TRUE}/\code{FALSE}), 
+#' the \code{pos} option which takes a relative vector for the position. \code{just} to tell
+#' it which justification to assume, and \code{size}, which takes a \code{unit} element to
+#' scale the size of the logo to the desired size.\cr
+#' \cr
 #' This function is not very elegant at the moment, but it might be improved
 #' over time.
-#'
+#' 
 #' @importFrom png readPNG
 #' @importFrom grid rasterGrob
 #' @export

@@ -1,7 +1,7 @@
 Package: normentR
 Type: Package
 Title: NORMENT's Collected Plotting and Functionality Package for R
-Version: 0.1.3
+Version: 0.1.4
 Author@R: person("Daniel", "Roelfs", email = "daniel.roelfs@medisin.uio.no",
                role = c("aut", "cre"))
 Author: Daniel Roelfs [aut, cre]

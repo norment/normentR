@@ -1,13 +1,16 @@
 #' Show NORMENT color palettes
 #'
 #' This function shows the NORMENT color palettes as defined in
-#' `norment_palette`. It is possible to either plot all by calling the function
+#' \code{norment_palette}. It is possible to either plot all by calling the function
 #' without any input arguments, or it's possible to show only the one palette by
-#' inserting the name of the color palette as argument.
+#' inserting the name of the color palette as argument.\cr
+#' NOTE: for the \code{"random"} option, the order of the colors is not shuffled 
+#' in this case. That only happens after calling the \code{norment_pal()} function.
 #'
 #' @usage
-#' norment_palette()
-#' norment_palette("gradient")
+#' show_norment_palette()
+#' show_norment_palette("gradient")
+#' show_norment_palette(c("powerpoint","profile","grey"))
 #'
 #' @export
 

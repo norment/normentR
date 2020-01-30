@@ -1,7 +1,6 @@
 #' Calculate FWER
 #'
-#' Calculate Family-Wise Error Rate (FWER) based on the number of comparisons 
-#' and the alpha level. 
+#' Calculate Family-Wise Error Rate (FWER) based on the number of comparisons and the alpha level. 
 #' 
 #' @param n Number of calculations
 #' @param alpha Alpha level (default at 0.05)

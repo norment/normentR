@@ -6,9 +6,9 @@
 \usage{
 theme_norment(
   base_family = "sans",
-  base_size = 12,
+  base_size = 9,
   plot_title_family = base_family,
-  plot_title_size = 18,
+  plot_title_size = 16,
   plot_title_face = "bold",
   plot_title_margin = 10,
   subtitle_family = base_family,
@@ -24,13 +24,11 @@ theme_norment(
   caption_margin = 10,
   axis_text_size = base_size,
   axis_title_family = subtitle_family,
-  axis_title_size = 11.5,
+  axis_title_size = 10.5,
   axis_title_face = "plain",
   axis_title_just = "c",
   plot_margin = margin(30, 30, 30, 30),
   grid = TRUE,
-  grid.y = TRUE,
-  grid.x = TRUE,
   grid_col = NULL,
   axis = FALSE,
   axis_col = NULL,
@@ -42,13 +40,13 @@ theme_norment(
 )
 }
 \description{
-This is a theme developed for use in combination with the `ggplot2` package.
+This is a theme developed for use in combination with the \code{ggplot2} package.
 It adds the default NORMENT font (Arial, support for other fonts used by
 NORMENT might be added later). There's quite some space for text and
 explanation, e.g. title, subtitle, caption, and so on. This theme is highly
 adaptable, so many elements in each plot can be formatted to personal taste.
 While this function contains the general style of the plot, it does not
 automatically use the NORMENT colors on data presented in the plot. In order
-to use the NORMENT colors also, please refer to the `scale_color_norment` and
-the `scale_fill_norment` functions, also included in the `normentR` package.
+to use the NORMENT colors also, please refer to the \code{scale_color_norment} and
+the \code{scale_fill_norment} functions, also included in the \code{normentR} package.
 }

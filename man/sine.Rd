@@ -15,9 +15,9 @@ v <- sine(-pi, 20, 1e5)
 \item{length}{length of the output vector}
 }
 \description{
-Provides a vector with the ouput from a `sin()` function. This function is 
+Provides a vector with the ouput from a \code{sin()} function. This function is 
 nothng more than a wrapper for said function. It takes a range of the sine 
-wave from a specific data point to a specific data point (e.g. -pi to pi).
+wave from a specific data point to a specific data point (e.g. -pi to pi).\cr
 Another input is the length of the output vector. Useful for cases where you
 want to perform a sine transformation on your data.
 }

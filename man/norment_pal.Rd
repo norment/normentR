@@ -9,3 +9,4 @@ norment_pal(palette = "default", reverse = FALSE, ...)
 \description{
 Get NORMENT palette colors
 }
+\keyword{internal}

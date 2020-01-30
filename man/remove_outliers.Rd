@@ -4,10 +4,11 @@
 \alias{remove_outliers}
 \title{Remove outliers from vector}
 \usage{
-remove_outliers(vector = NULL, replace_with_na = TRUE)
+data$x <- remove_outliers(data$x)
+data <- data \%>\% mutate(x_no_outliers = remove_outliers(x))
 }
 \description{
-As default, this function replaces the outliers with `NA`. Setting the 
-`replace_with_na` setting to `FALSE` will remove the outliers from a vector,
-and thus return a shorter vector.
+As default, this function replaces the outliers with \code{NA}. Setting the 
+\code{replace_with_na} setting to \code{FALSE} will remove the outliers from a vector,
+and thus return a shorter vector. Works also within a pipe structure (\code{\%>\%}).
 }
