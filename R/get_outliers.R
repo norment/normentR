@@ -8,9 +8,7 @@
 
 get_outliers <- function(vector = NULL) {
   
-  if (!is.numeric(vector)) {
-    warning("No numeric vector provided, please provide a numeric vector")
-  }
+  if (!is.numeric(vector)) { warning("No numeric vector provided, please provide a numeric vector") }
   
   outliers <- boxplot(vector, plot = FALSE)$out
   
@@ -32,7 +30,7 @@ get_outliers <- function(vector = NULL) {
 
 remove_outliers <- function(vector = NULL, replace_with_na = TRUE) {
   
-  if (!is.numeric(from) & !is.integer(from)) { warning("No numeric vector provided, please provide a numeric vector"); return() }
+  if (!is.numeric(vector) & !is.integer(vector)) { warning("No numeric vector provided, please provide a numeric vector"); return() }
   
   outliers <- get_outliers(vector = vector)
   if (replace_with_na) {

@@ -20,7 +20,6 @@ sine <- function(from = NULL, to = NULL, length = 1000) {
   
   if (is.null(from)) { warning("from cannot be empty, no default is available for from, please assign a numeric or integer value"); return() } 
   if (is.null(to)) { warning("to cannot be empty, no default is available for from, please assign a numeric or integer value"); return() } 
-  if (length(x) == 0) { warning("length of output cannot be zero, please assign a value larger than 1"); return() } 
   if (!is.numeric(from) & !is.integer(from)) { warning("from has to be a numeric or integer value"); return() } 
   if (!is.numeric(to) & !is.integer(to)) { warning("to has to be a numeric or integer value"); return() } 
   

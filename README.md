@@ -6,7 +6,10 @@ The very much unofficial package with tools to create plots in `ggplot` using th
 ## Installation
 This package is not available on CRAN, and likely won't be for the forseeable future. The only way to install it is by either getting the source file for installation on the TSD or any other machine without internet connection or installing it using the `{devtools}` package (which is recommended). The latter option requires the `{devtools}` package to be installed. Alternatively, it's possible to install the source package by downloading this package from the GitHub, by downloading a source file from the wiki, or by asking [Daniel](mailto:daniel.roelfs@medisin.uio.no) for the source file.
 ```{r, eval=FALSE}
-# Install latest version
+# On TSD
+install.packages("/cluster/projects/p33/users/dtroelfs/software/R/normentR_0.1.4.tar.gz", type = "source", repos = NULL)
+
+# Anywhere else
 devtools::install_github("norment/normentR")
 ```
 
@@ -44,8 +47,15 @@ simulateGWAS()
 
 There are a few other scripts in this package, which are mainly used for color definitions and scripts to create the color definitions into formats that can be used with the `ggplot()` function. More functionality will be added over time.
 
+## Statistics
+This package contains functions to extract some statistical properties from data, such as the effect size (`cohens_d()`), the standard error of the mean (`sem()`) and the family-wise error rate (`FWER()`).
+
 ## Functionality
-The `clear()` function is a more accessible version of the `rm()` function. In particular the `%!in%` function may be useful
+The `%in%` operator is very useful, but sometimes one would like to extract the values that do NOT exist in another data frame. It is possible to just wrap the `%in%` operator in a negation, but I felt it was more intuitive to create a function that states more explicitely what it's doing, the `%!in%` function. This function particularly useful in cases where you need to find participants that do not exist in one datafile, so you can track the data from these individuals down down.
+Over the duration of a long coding session in R, the workspace with the variables can clog up somewhat. The `clear()` function attempts to answer some of this. It is nothing more than a wrapper for the `rm` function, but it takes simpler input. It's possible to either remove all variables (`clear()`), remove specific variables only (either individuals or matching a string (`clear("data_*")`)), or remove all variables except an individual variable or variables matching a string (`clear(keep = "data")`).
+
+## Simulate GWAS data
+The `simulateGWAS()` function generates a simulated dataset with similar properties to the PLINK output of the `--assoc` flag. Columns, values, and properties are similar to a regular GWAS from a UK Biobank sample with a quantitative phenotype.
 
 ## Color Palettes
 All colors used in this package come from either the NORMENT design guide, or colors frequently used by NORMENT (such as in the logo or the order of the colors as used in the Powerpoint templates). Possible options for the color palette are stored in the function `available_palettes()`. To view all color palattes, type: `show_norment_palette()`. To view only one or more palettes, submit them as arguments into the last function as such: `show_norment_palette(c("default","gradient"))`.
@@ -62,13 +72,3 @@ show_norment_logo(plot.obj)
 shift_axes(plot.obj, x = 0, y = 0)
 ```
 
-## Statistics
-This package contains functions to extract some statistical properties from data, such as the effect size (`cohens_d()`), the standard error of the mean (`sem()`) and the family-wise error rate (`FWER()`).
-
-## Functionality
-I added a function to quickly and efficiently read in the TOP cleanfile, called the `readTOPdemographics()` function.
-The `%in%` operator is very useful, but sometimes one would like to extract the values that do NOT exist in another data frame. It is possible to just wrap the `%in%` operator in a negation, but I felt it was more intuitive to create a function that states more explicitely what it's doing, the `%!in%` function. This function particularly useful in cases where you need to find participants that do not exist in one datafile, so you can track the data from these individuals down down.
-Over the duration of a long coding session in R, the workspace with the variables can clog up somewhat. The `clear()` function attempts to answer some of this. It is nothing more than a wrapper for the `rm` function, but it takes simpler input. It's possible to either remove all variables (`clear()`), remove specific variables only (either individuals or matching a string (`clear("data_*")`)), or remove all variables except an individual variable or variables matching a string (`clear(keep = "data")`). The last is particularly useful for working with large datasets that take a long time to load. A warning is warranted because this is a function that acts on the global environment (`.GlobalEnv`) from the function environment.
-
-## Simulate GWAS data
-The `simulateGWAS()` function generates a simulated dataset with similar properties to the PLINK output of the `--assoc` flag. Columns, values, and properties are similar to a regular GWAS from a UK Biobank sample with a quantitative phenotype.
