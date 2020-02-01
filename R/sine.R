@@ -14,7 +14,7 @@
 #' v <- sine(from = -2, to = 2*pi, length = 1000)
 #' v <- sine(-pi, 20, 1e5)
 #'
-#' @export sine
+#' @export
 
 sine <- function(from = NULL, to = NULL, length = 1000) {
   

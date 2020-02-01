@@ -16,7 +16,7 @@
 #' package.
 #'
 #' @name norment_palette
-#' @export norment_palette
+#' @export
 
 # Get scico palettes
 load(system.file("scico_palettes.rda", package = "normentR"))
