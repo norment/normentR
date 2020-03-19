@@ -4,7 +4,9 @@
 \name{norment_colors}
 \alias{norment_colors}
 \title{Get NORMENT colors}
-\format{An object of class \code{character} of length 11.}
+\format{
+An object of class \code{character} of length 11.
+}
 \usage{
 norment_colors
 norment_colours

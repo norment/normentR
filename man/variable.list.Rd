@@ -5,6 +5,10 @@
 \title{Get variable list}
 \usage{
 variable.list()
+variable.list(pattern = "plotdata")
+variable.list(class = "double")
+variable.list(class = c("function","list","dataframe"))
+variable.list(pattern = "df*", class = c("list","data frame"))
 }
 \description{
 This function is a wrapper for both the \code{ls()} and the \code{typeof} function.

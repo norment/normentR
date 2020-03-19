@@ -4,7 +4,7 @@
   
   version <- packageVersion("normentR")
   date <- packageDate("normentR")
-
+  
   ## Print on Screen
   packageStartupMessage("-----------------------------------------------------------------")
   packageStartupMessage("Welcome to the {normentR} package!")
