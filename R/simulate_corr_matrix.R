@@ -31,16 +31,16 @@ simulate_corr_matrix <- function(nnodes = NULL,
   corr <- rnorm(nedges, mean = mean, sd = sd)
   
   if (shape == "full") {
-    corr.matrix <- get.full.matrix(corr, nnodes)
+    corr_matrix <- get_full_matrix(corr, nnodes)
   } else if (shape == "upper") {
-    corr.matrix <- get.upper.half.matrix(corr, nnodes)
+    corr_matrix <- get_upper_half_matrix(corr, nnodes)
   } else if (shape == "lower") {
-    corr.matrix <- get.lower.half.matrix(corr, nnodes)
+    corr_matrix <- get_lower_half_matrix(corr, nnodes)
   } else {
     warning('No valid shape defined, options are: "full", "upper", or "lower"')
     return()
   }
   
-  return(corr.matrix)
+  return(corr_matrix)
   
 }
