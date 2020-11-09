@@ -1,9 +1,9 @@
 #' Matrix modifications
 #'
 #' Performs matrix modifications:\cr
-#' \code{get.full.matrix()}\cr
-#' \code{get.upper.half.matrix()}\cr
-#' \code{get.lower.half.matrix}\cr
+#' \code{get_full_matrix()}\cr
+#' \code{get_upper_half_matrix()}\cr
+#' \code{get_lower_half_matrix}\cr
 #' 
 #' Credit: Tobias Kaufmann
 

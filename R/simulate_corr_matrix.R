@@ -9,10 +9,10 @@
 #' @param shape Shape of the correlation matrix ("full","upper","lower")
 #'
 #' @usage 
-#' corr.matrix <- simulate.corr.matrix(60)
-#' corr.matrix <- simulate.corr.matrix(nnodes = 40, mean = 0, sd = 0.5,
+#' corr_matrix <- simulate_corr_matrix(60)
+#' corr_matrix <- simulate_corr_matrix(nnodes = 40, mean = 0, sd = 0.5,
 #'    shape = "upper")
-#' corr.matrix <- simulate.corr.matrix(nnodes = 180, mean = 100, sd = 6,
+#' corr_matrix <- simulate_corr_matrix(nnodes = 180, mean = 100, sd = 6,
 #'    shape = "lower")
 #'
 #' @export

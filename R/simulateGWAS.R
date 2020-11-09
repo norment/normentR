@@ -22,10 +22,10 @@
 #' @param nSigCols Number of significant columns
 #'
 #' @usage 
-#' sim.dat <- simulateGWAS()
-#' sim.dat <- simulateGWAS(nSNPs = 5e5, N = 2e4, 
+#' sim_dat <- simulateGWAS()
+#' sim_dat <- simulateGWAS(nSNPs = 5e5, N = 2e4, 
 #'    AddSigSNPs = FALSE, SigCHR = NULL, nSigCols = NULL)
-#' sim.dat <- simulateGWAS(nSNPs = 2e5, N = 6e5, 
+#' sim_dat <- simulateGWAS(nSNPs = 2e5, N = 6e5, 
 #'    AddSigSNPs = TRUE, SigCHR = c(2,4,6,7), nSigCols = 4)
 #'
 #' @export
